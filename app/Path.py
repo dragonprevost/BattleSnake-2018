@@ -17,6 +17,10 @@ class Path:
                 return food_to_head
         return None
 
+    def attack_path(self):
+        # Return path to closest snake to attack
+        pass
+    
     def path_to_tail(self):
         snake_tails = [info.get_tail() for info in self.board.get_enemies()]
         snake_tails.append(self.board.get_our_snake().get_tail())
@@ -43,7 +47,7 @@ class Path:
     def stall(self):
         
         us = self.board.get_our_snake()
-        path= self.path_to_tail()
+        path = self.path_to_tail()
         
         if path and isinstance(path[-1],SnakeNode) and path[-1].get_snake_info().health == 100 and len(path)<=2:
             return None

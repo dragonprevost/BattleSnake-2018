@@ -5,7 +5,7 @@ class SnakeNode(Node):
         x = point['x']
         y = point['y']
         super(SnakeNode, self).__init__((x, y))
-
+        
         self._snake_info = snake_info
 
     def get_snake_info(self):

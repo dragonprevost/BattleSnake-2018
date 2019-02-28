@@ -7,6 +7,9 @@ class SnakeInfo:
         self.length = len(data['body'])
         self._tail = (data['body'][self.length-1]['x'], data['body'][self.length-1]['y'])
         self._id = data['id']
+		
+        # For Attaching Snakes;
+        self._attack = False
 
         self._board = board
 

@@ -69,7 +69,6 @@ def move():
     else:
         direction = dir(snake.get_head(), path[1])
     
-    print direction
 
     return {
         'move': direction,
